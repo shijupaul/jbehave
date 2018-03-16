@@ -13,8 +13,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.dir>${basedir}/target</project.build.dir>
 
-        <libs.spring.boot.version>1.5.9.RELEASE</libs.spring.boot.version>
-        <libs.spring.version>5.0.2.RELEASE</libs.spring.version>
+        <libs.spring.boot.version>1.4.1.RELEASE</libs.spring.boot.version>
+        <libs.spring.version>4.3.14.RELEASE</libs.spring.version>
+        <jaction.xml.version>2.7.3</jaction.xml.version>
         <libs.thucydides.version>0.9.228</libs.thucydides.version>
         <libs.slf4j.version>1.7.13</libs.slf4j.version>
     </properties>
@@ -53,11 +54,23 @@
             <scope>test</scope>
         </dependency>
 
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <version>2.9.0</version>
+            <version>${jaction.xml.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jaction.xml.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jaction.xml.version}</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -71,19 +84,18 @@
             <version>2.6</version>
         </dependency>
 
+        <!--
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
             <version>4.3.13.RELEASE</version>
         </dependency>
-
-        <!--
+        -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${libs.spring.boot.version}</version>
         </dependency>
-        -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
