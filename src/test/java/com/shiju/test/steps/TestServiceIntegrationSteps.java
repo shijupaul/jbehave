@@ -3,6 +3,7 @@ package com.shiju.test.steps;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import org.junit.Assert;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 
 public class TestServiceIntegrationSteps {
@@ -27,5 +28,6 @@ public class TestServiceIntegrationSteps {
     @Then("It should be the expected person")
     public void thenItShouldBeThePersonExpected() throws Throwable {
         System.out.println("**** It should be the expected person'");
+        Assert.fail("Failed the test");
     }
 }
