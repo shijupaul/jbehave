@@ -28,6 +28,7 @@ public class TestServiceIntegrationSteps {
     @Then("It should be the expected person")
     public void thenItShouldBeThePersonExpected() throws Throwable {
         System.out.println("**** It should be the expected person'");
+        Thread.sleep(180000);
         Assert.fail("Failed the test");
     }
 }
